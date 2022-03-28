@@ -22,11 +22,14 @@ header {
   background-color: #f6f6f6;
 }
 
-header .inner {
+.inner {
   width: 1100px;
-  height: 120px;
   margin: 0 auto;
   position: relative;
+}
+
+header > .inner {
+  height: 120px;
 }
 
 header .logo {
@@ -131,7 +134,7 @@ header .main-menu .item .item__name {
   font-size: 13px;
 }
 
-header .main-menu .item:hover .item__name{
+header .main-menu .item:hover .item__name {
   background-color: #2c2a29;
   color: #ea9926;
   border-radius: 6px 6px 0 0;
@@ -145,10 +148,50 @@ header .main-menu .item .item__contents {
   display: none;
 }
 
-header .main-menu .item:hover .item__contents{
+header .main-menu .item:hover .item__contents {
   display: block;
 }
 
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;
+}
 
+header .main-menu .item .item__contents .contents__menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
 
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #ea9926;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("./assets/images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 900;
+}
+
+header .main-menu .item .item__contents .contents__texture p {
+  color: #ea9926;
+  margin: 4px 0 14px;
+}
 /*  */
