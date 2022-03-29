@@ -10,16 +10,26 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: #333333;
+  /* height: 4000px; */
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* Header 부분 */
 
 header {
   background-color: #f6f6f6;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 1px solid #c8c8c8;
 }
 
 .inner {
@@ -194,4 +204,28 @@ header .main-menu .item .item__contents .contents__texture p {
   color: #ea9926;
   margin: 4px 0 14px;
 }
-/*  */
+
+/* badges*/
+
+header .badges {
+  position: fixed;
+  top: 132px;
+  right: 12px;
+  z-index: 9;
+  display: block;
+}
+
+header .badges .ison{
+  display: none;
+  opacity: 0;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
