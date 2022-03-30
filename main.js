@@ -1,3 +1,4 @@
+// 검색기능 구동
 const searchEl = document.querySelector(".search");
 console.log(searchEl);
 const searchInputEl = searchEl.querySelector("input");
@@ -17,6 +18,7 @@ searchInputEl.addEventListener("blur", function () {
   searchInputEl.setAttribute("placeholder", "");
 });
 
+// 배찌 부분 구동
 let badge = document.querySelector("header .badges");
 
 window.addEventListener("scroll", function () {
@@ -35,3 +37,14 @@ window.addEventListener("scroll", function () {
     });
   }
 });
+
+
+// 메인 배너 순차 애니메이션
+const fadeimg = document.querySelectorAll('.visual .fade-in');
+
+fadeimg.forEach(function(fadeimg, index){
+  gsap.to(fadeimg, 1,{
+    delay: (index + 1) * .7,
+    opacity: 1,
+  })
+})
