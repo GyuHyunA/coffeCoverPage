@@ -215,7 +215,7 @@ header .badges {
   display: block;
 }
 
-header .badges .ison{
+header .badges .ison {
   display: none;
   opacity: 0;
 }
@@ -228,4 +228,109 @@ header .badges .badge {
   overflow: hidden;
 }
 
+/* visual */
+.visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+.visual .inner {
+  height: 646px;
+}
+.visual .title {
+  position: absolute;
+  top: 40px;
+  left: -10px;
+}
+.visual .title .btn {
+  position: absolute;
+  top: 230px;
+  left: 148px;
+}
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+.visual .cup2.text {
+  position: absolute;
+  top: 186px;
+  right: 412px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+.visual .fade-in {
+  opacity: 0;
+}
 
+/* btn */
+
+.btn {
+  width: 130;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+
+.btn.btn--brown:hover {
+  color: white;
+  background-color: #592b18;
+}
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: white;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.btn.btn--white {
+  color: white;
+  border-color: white;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: white;
+}
+
+.btn.btn--gold {
+  color: #d9aaba;
+  border-color: #d9aaba;
+}
+.btn.btn--gold:hover {
+  color: whtie;
+  background-color: #d9aaba;
+}
