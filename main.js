@@ -23,7 +23,7 @@ let badge = document.querySelector("header .badges");
 
 window.addEventListener("scroll", function () {
   // console.log(window.scrollY);
-  if (this.window.scrollY > 1000) {
+  if (this.window.scrollY > 500) {
     // badge.style.display = "none";
     gsap.to(badge, 0.6, {
       opacity: 0,
@@ -38,13 +38,47 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
 // 메인 배너 순차 애니메이션
-const fadeimg = document.querySelectorAll('.visual .fade-in');
+const fadeimg = document.querySelectorAll(".visual .fade-in");
 
-fadeimg.forEach(function(fadeimg, index){
-  gsap.to(fadeimg, 1,{
-    delay: (index + 1) * .7,
+fadeimg.forEach(function (fadeimg, index) {
+  gsap.to(fadeimg, 1, {
+    delay: (index + 1) * 0.7,
     opacity: 1,
-  })
-})
+  });
+});
+
+// promotion 토글
+const promotion = document.querySelector("section.promotion");
+const promotionToggleBtn = document.querySelector(".inner__right");
+promotionToggleBtn.addEventListener("click", function () {
+  if (promotion.classList.contains("hide")) {
+    promotion.classList.remove("hide");
+  } else {
+    promotion.classList.add("hide");
+  }
+});
+
+//swiper
+new Swiper(".notice .swiper", {
+  direction: "vertical",
+  autoplay: true,
+  loop: true,
+});
+
+new Swiper(".promotion .swiper", {
+  autoplay: true,
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  simulateTouch: false, // 책과 다르게 추가
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    type: "bullets",
+  },
+  navigation: {
+    nextEl: ".promotion .swiper-button-next",
+    prevEl: ".promotion .swiper-button-prev",
+  },
+});
