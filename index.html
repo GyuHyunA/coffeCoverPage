@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <title>project2</title>
-    <script defer src="main.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/youtubeAPI.js"></script>
   </head>
   <body>
     <header>
@@ -451,6 +452,25 @@
       <div class="swiper-button-next">
         <span class="material-icons">arrow_forward</span>
       </div>
+    </section>
+    <!-- rewards -->
+    <section class="rewards">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+        <div class="btn-group">
+          <div class="btn btn--reverse sign-up">회원가입</div>
+          <div class="btn sign-in">로그인</div>
+          <div class="btn gift">e-Gift 선물하기</div>
+        </div>
+      </div>
+    </section>
+    <!-- youtube API -->
+    <section class="youtube">
+      <div class="youtube__area">
+        <div id="player"></div>
+      </div>
+      <div class="youtube__cover"></div>
     </section>
   </body>
 </html>
