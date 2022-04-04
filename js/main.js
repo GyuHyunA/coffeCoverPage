@@ -19,7 +19,8 @@ searchInputEl.addEventListener("blur", function () {
 });
 
 // 배찌 부분 구동
-let badge = document.querySelector("header .badges");
+const badge = document.querySelector("header .badges");
+const toTopEl = document.querySelector("#to-top");
 
 window.addEventListener("scroll", function () {
   // console.log(window.scrollY);
@@ -29,13 +30,26 @@ window.addEventListener("scroll", function () {
       opacity: 0,
       display: "none",
     });
+    gsap.to(toTopEl, 0.6, {
+      opacity: 1,
+      x: 0,
+    });
   } else {
     // badge.style.display = "block";
     gsap.to(badge, 0.6, {
       opacity: 1,
       display: "block",
     });
+    gsap.to(toTopEl, 0.6, {
+      opacity: 0,
+      x: 100,
+    });
   }
+});
+toTopEl.addEventListener("click", function () {
+  gsap.to(window, 0.6, {
+    scrollTo: 0,
+  });
 });
 
 // 메인 배너 순차 애니메이션
@@ -104,3 +118,25 @@ gsap.to(".floating3", 2.5, {
   yoyo: true,
   ease: Power1.easeInOut,
 });
+
+// scroll magic
+const spyscr = document.querySelectorAll("section.scroll-spy");
+console.log(spyscr);
+spyscr.forEach(function (spyv) {
+  new ScrollMagic.Scene({ triggerElement: spyv, triggerHook: 0.8 }).setClassToggle(spyv, "show").addTo(new ScrollMagic.Controller());
+});
+
+// awards
+new Swiper(".awards .swiper", {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: ".awards .swiper-button-prev",
+    nextEl: ".awards .swiper-button-next",
+  },
+});
+
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear();
